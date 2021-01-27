@@ -1,0 +1,73 @@
+#produtos {
+    margin: 80px auto;
+}
+
+#produtos .filtros {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#produtos .filtros li {
+    margin: 5px 0;
+}
+
+#produtos article, #produtos article > div {
+    border: solid 0.5px #999;
+    border-radius: 10px;
+}
+
+#produtos article {
+    max-width: 200px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+#produtos article div.container-img {
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#produtos article div.dados-produto {
+    padding: 10px;
+}
+
+#produtos article div.dados-produto .texto-bold {
+    font-size: 16px;
+}
+
+#produtos article div.dados-produto .texto-light {
+    font-size: 14px;
+    text-align: start;
+}
+
+#produtos article div.dados-produto .descricao {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#produtos article div.dados-produto .preco {
+    text-align: start;
+    color: darkgreen;
+}
+
+#produtos article button {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: var(--azul);
+    color: var(--branco);
+    cursor: pointer;
+}
+
+/*Botões do carousel*/
+#produtos button {
+    box-shadow: none;
+    padding: 15px;
+}

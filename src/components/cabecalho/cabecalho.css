@@ -1,0 +1,103 @@
+header {
+    background: var(--azul);
+    border-bottom: var(--borda) var(--amarelo);
+}
+
+header div.menu {
+    height: auto;
+    padding: 7.5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu nav {
+    display: none;
+    position: absolute;
+    top: 64.26px;
+    right: 0;
+}
+
+.menu-toggle div {
+    height: 3px;
+    width: 20px;
+    background: var(--branco);
+    margin: 2px 0;
+    border-radius: 25px;
+}
+
+header .menu.on nav {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    background: var(--preto);
+}
+
+header .menu.on nav li {
+    padding: 10px 25px;
+    text-align: center
+}
+
+header .menu.on .two {
+    opacity: 0;
+}
+
+header .menu.on .one {
+    transform: rotate(45deg) translate(3px, 3px)
+}
+
+header .menu.on .three {
+    transform: rotate(-45deg) translate(4px, -4px)
+}
+
+header .menu .one, .two, .three {
+    transition-duration: 0.3s;
+}
+
+header nav div {
+    border-top: var(--borda) #444;
+    width: 65%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header .menu.on nav div li {
+    padding: 10px;
+}
+
+@media screen and (min-width: 804px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    header .menu nav {
+        display: block;
+        position: unset;
+        margin: auto;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    header nav ul li {
+        padding: 0 30px;
+    }
+
+    header nav div {
+        display: none;
+    }
+
+    header nav ul li a {
+        transition-duration: 0.2s;
+    }
+
+    header nav ul li a:hover {
+        color: var(--amarelo);
+        text-shadow: 0 0 1.5px var(--amarelo);
+        transition-duration: 0.2s;
+    }
+}

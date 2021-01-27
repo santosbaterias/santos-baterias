@@ -1,0 +1,114 @@
+/*Barlow font*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--branco);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --azul: #191E74;
+    --amarelo:#FEC309;
+    --preto: #222222;
+    --branco: #EFEFEF;
+    --borda: solid 3px;
+}
+
+.container-lg {
+    width: 92.5%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+}
+
+.container-wd {
+    width: 89%;
+    max-width: 850px;
+    height: auto;
+    margin: auto;
+}
+
+.logo {
+    width: 120px;
+}
+
+.titulo {
+    font-weight: 800;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.texto-bold {
+    font-weight: 600;
+    text-align: center;
+}
+
+.texto-light {
+    font-weight: 400;
+    text-align: center;
+}
+
+.texto-branco {
+    color: var(--branco);
+}
+
+.texto-preto {
+    color: var(--preto);
+}
+
+i {
+    font-size: 30px;
+}
+
+i.fa-whatsapp {
+    color: #4EBF61;
+}
+
+i.fa-facebook {
+    color: #3F90FB;
+}
+
+i.fa-instagram {
+    background: -webkit-linear-gradient(#485FAB, #EF2D76, #FFE292);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+i.fa-map-marker-alt {
+    color: #D93B2D;
+}
+
+select, button {
+    background: transparent;
+    border: var(--borda) var(--amarelo);
+    border-radius: 50px;
+    outline: none;
+}
+
+select {
+    padding: 2.5px 10px;
+}
+
+button {
+    display: flex;
+    padding: 5px 20px;
+    box-shadow: inset 0 0 8px var(--amarelo), 0 0 8px var(--amarelo);
+}
+
+button i {
+    font-size: 1.25em;
+    padding-right: 4px;
+}

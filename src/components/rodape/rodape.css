@@ -1,0 +1,17 @@
+footer {
+    height: auto;
+    width: 100%;
+    background: var(--azul);
+    margin-top: 80px;
+    border-top: var(--borda) var(--amarelo);
+}
+
+footer .logo {
+    margin: 0 auto;
+    display: block;
+    padding: 15px 0;
+}
+
+footer p {
+    padding-bottom: 15px;
+}

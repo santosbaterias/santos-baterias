@@ -1,0 +1,26 @@
+#quemsomos {
+    margin: 80px auto;
+    height: auto;
+}
+
+#quemsomos li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    text-align: left;
+}
+
+#quemsomos ul {
+    margin: 30px auto;
+    width: auto;
+    min-width: auto;
+    max-width: 270px;
+}
+
+.circulo {
+    height: 10px;
+    width: 10px;
+    background-color: var(--azul);
+    border-radius: 100%;
+    margin-right: 10px;
+}
