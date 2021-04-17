@@ -24,7 +24,7 @@ const Cabecalho = ({ inDetalhes }) => {
     return (
         <header>
             <div className="container-lg menu">
-                <a href="/santos-baterias"><img src={Logo} alt="Logo da empresa Santos Baterias." className="logo" title="Santos Baterias - A melhor opção para você e seu carro! :)" loading="lazy" /></a>
+                <a href="/"><img src={Logo} alt="Logo da empresa Santos Baterias." className="logo" title="Santos Baterias - A melhor opção para você e seu carro! :)" loading="lazy" /></a>
                 <div className="menu-toggle" onClick={abrirMenu}>
                     <div className="one"></div>
                     <div className="two"></div>
@@ -37,19 +37,19 @@ const Cabecalho = ({ inDetalhes }) => {
                             ?
                             <>
                                 <li>
-                                    <a href="/santos-baterias/#home" className="texto-bold texto-branco scroll" title="Receba boas vindas!">Home</a>
+                                    <a href="/#home" className="texto-bold texto-branco scroll" title="Receba boas vindas!">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/santos-baterias/#produtos" className="texto-bold texto-branco scroll" title="Conheça nossos produtos!">Produtos</a>
+                                    <a href="/#produtos" className="texto-bold texto-branco scroll" title="Conheça nossos produtos!">Produtos</a>
                                 </li>
                                 <li>
-                                    <a href="/santos-baterias/#quemsomos" className="texto-bold texto-branco scroll" title="Saiba o porquê somos a melhor opção para você e seu carro!">Quem somos</a>
+                                    <a href="/#quemsomos" className="texto-bold texto-branco scroll" title="Saiba o porquê somos a melhor opção para você e seu carro!">Quem somos</a>
                                 </li>
                                 <li>
-                                    <a href="/santos-baterias/#visitenos" className="texto-bold texto-branco scroll" title="Veja nosso endereço!">Visite-nos</a>
+                                    <a href="/#visitenos" className="texto-bold texto-branco scroll" title="Veja nosso endereço!">Visite-nos</a>
                                 </li>
                                 <li>
-                                    <a href="/santos-baterias/#contato" className="texto-bold texto-branco scroll" title="Veja nosso contato!">Contato</a>
+                                    <a href="/#contato" className="texto-bold texto-branco scroll" title="Veja nosso contato!">Contato</a>
                                 </li>
                                 <div>
                                     <li>

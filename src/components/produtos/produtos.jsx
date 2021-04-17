@@ -164,7 +164,7 @@ const Produtos = () => {
                                             <p className="texto-light">à vista {(Number(bateria.preco)-20).toFixed(2)}{"\n"}</p>
                                             <p>ou...</p>
                                             <p className="texto-light">até {bateria.parcelas}x de R${Number(bateria.preco/bateria.parcelas).toFixed(2)} sem juros</p>
-                                            <a href={`${bateria.id}`}><button>Ver detalhes</button></a>
+                                            <a href={`/detalhes/${bateria.id}`}><button>Ver detalhes</button></a>
                                         </div>
                                     </div>
                                 </article>
