@@ -8,19 +8,13 @@ import 'react-multi-carousel/lib/styles.css';
 
 import {db} from "../../utils/constants";
 
-//[Imagem]
-//[Marca]
-//Bateria [Amperagem]Ah - [Tempo] de garantia
-//[Preço]
-//[qtd]x de [preço/qtd]
-
 const responsive = {
     desktop: {
         breakpoint: {
             max: 3000,
             min: 1025
         },
-        items: 5,
+        items: 2.9,
         partialVisibilityGutter: 40
     },
     laptop: {
@@ -28,7 +22,7 @@ const responsive = {
             max: 1024,
             min: 769
         },
-        items: 4.5,
+        items: 2.6,
         partialVisibilityGutter: 40
     },
     tabletS: {
@@ -36,42 +30,42 @@ const responsive = {
             max: 500,
             min: 426
         },
-        items: 2.7
+        items: 1.9
     },
     tabletM: {
         breakpoint: {
             max: 650,
             min: 501
         },
-        items: 3.5
+        items: 2.2
     },
     tabletL: {
         breakpoint: {
             max: 768,
             min: 651
         },
-        items: 4.2
+        items: 2.4
     },
     mobileS: {
         breakpoint: {
             max: 320,
             min: 0
         },
-        items: 1.75
+        items: 1.2
     },
     mobileM: {
         breakpoint: {
             max: 375,
             min: 321
         },
-        items: 2.1
+        items: 1.5
     },
     mobileL: {
         breakpoint: {
             max: 425,
             min: 376
         },
-        items: 2.5
+        items: 1.7
     }
 }
 
@@ -99,7 +93,8 @@ const Produtos = () => {
                 mesesGarantia: documento.data().mesesGarantia,
                 preco: documento.data().preco,
                 parcelas: documento.data().parcelas,
-                tipo: documento.data().tipo
+                tipo: documento.data().tipo,
+                ativo: documento.data().ativo
             }
         });
         setBaterias(data);
@@ -119,9 +114,11 @@ const Produtos = () => {
                                 return (a.marca > b.marca) ? 1 : ((b.marca > a.marca) ? -1 : 0);
                             })
                             .map((bateria, index) => {
-                                if(marcas.indexOf(bateria.marca)===-1) {
-                                    marcas.push(bateria.marca);
-                                    return <option value={bateria.marca} key={index}>{bateria.marca}</option>;
+                                if(bateria.ativo) {
+                                    if(marcas.indexOf(bateria.marca)===-1) {
+                                        marcas.push(bateria.marca);
+                                        return <option value={bateria.marca} key={index}>{bateria.marca}</option>;
+                                    }
                                 }
                             })
                         }
@@ -137,9 +134,11 @@ const Produtos = () => {
                                 return (a.tipo > b.tipo) ? 1 : ((b.tipo > a.tipo) ? -1 : 0);
                             })
                             .map((bateria, index) => {
-                                if(tipos.indexOf(bateria.tipo)===-1) {
-                                    tipos.push(bateria.tipo);
-                                    return <option value={bateria.tipo} key={index}>{bateria.tipo}</option>
+                                if(bateria.ativo) {
+                                    if(tipos.indexOf(bateria.tipo)===-1) {
+                                        tipos.push(bateria.tipo);
+                                        return <option value={bateria.tipo} key={index}>{bateria.tipo}</option>
+                                    }
                                 }
                             })
                         }
@@ -153,20 +152,23 @@ const Produtos = () => {
                         return (a.marca > b.marca) ? 1 : ((b.marca > a.marca) ? -1 : 0);
                     })
                     .filter(marca===""&&tipo===""? bateria=>bateria.id!==-1 : marca===""&&tipo!==""? bateria=>bateria.tipo===tipo : marca!==""&&tipo===""? bateria=>bateria.marca===marca : marca!==""&&tipo!==""? bateria=>bateria.marca===marca&&bateria.tipo===tipo : "").map((bateria, index) => {
-                        return (
-                            <article key={index}>
-                                <div>
-                                    <div className="container-img" style={{backgroundImage: `url(${bateria.urlImagem})`, backgroundSize: "cover", backgroundPosition: "50% 50%"}}></div>
-                                    <div className="dados-produto">
-                                        <h1 className="texto-bold">{bateria.marca}</h1>
-                                        <p className="texto-light descricao">Bateria {bateria.amperagem}Ah - {bateria.mesesGarantia} meses de garantia</p>
-                                        <p className="texto-bold preco">R${bateria.preco}</p>
-                                        <p className="texto-light">{bateria.parcelas}x de R${bateria.preco/bateria.parcelas}</p>
-                                        <a href={`https://api.whatsapp.com/send?phone=5511983164019&text=Olá!%20Quero%20comprar%20a%20bateria%20${bateria.marca}%20${bateria.amperagem}Ah.`}><button>Comprar</button></a>
+                        if(bateria.ativo)
+                            return (
+                                <article key={index} style={{marginRight: 30}}>
+                                    <div>
+                                        <div className="container-img" style={{backgroundImage: `url(${bateria.urlImagem})`, backgroundSize: "cover", backgroundPosition: "50% 50%"}}></div>
+                                        <div className="dados-produto">
+                                            <h1 className="texto-bold">{bateria.marca}</h1>
+                                            <p className="texto-light descricao">Bateria {bateria.amperagem}Ah - {bateria.mesesGarantia} meses de garantia</p>
+                                            <p className="texto-bold preco">R${Number(bateria.preco).toFixed(2)}</p>
+                                            <p className="texto-light">à vista {(Number(bateria.preco)-20).toFixed(2)}{"\n"}</p>
+                                            <p>ou...</p>
+                                            <p className="texto-light">até {bateria.parcelas}x de R${Number(bateria.preco/bateria.parcelas).toFixed(2)} sem juros</p>
+                                            <a href={`${bateria.id}`}><button>Ver detalhes</button></a>
+                                        </div>
                                     </div>
-                                </div>
-                            </article>
-                        );
+                                </article>
+                            );
                     })
                 }
             </Carousel>

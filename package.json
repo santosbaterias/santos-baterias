@@ -1,5 +1,5 @@
 {
-  "name": "Santos_Baterias",
+  "name": "santos-baterias",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-multi-carousel": "^2.6.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-typing-animation": "^1.6.2"

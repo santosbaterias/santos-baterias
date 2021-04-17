@@ -2,9 +2,7 @@
     height: calc(100vh - 64.26px);
     min-height: 200px;
     width: 100%;
-    background: url("../../images/Banner.jpg") fixed;
-    background-size: cover;
-    background-position: 50% 50%;
+    background: var(--branco);
 }
 
 .home {
