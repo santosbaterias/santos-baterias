@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -15,15 +15,17 @@ import "./index.css";
 import Home from "./pages/home/home";
 import DetalhesDaBateria from "./pages/detalhes-da-bateria/detalhes-da-bateria";
 
-console.log(process.env.PUBLIC_URL)
-
-ReactDOM.render(
+const routing = (
   <Router basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/" component={Home}/>
-      <Route path="/:idBateria" component={DetalhesDaBateria}/>
+      <Route exact path="/:idBateria" component={DetalhesDaBateria}/>
     </Switch>
-  </Router>,
+  </Router>
+)
+
+ReactDOM.render(
+  routing,
   document.getElementById('root')
 );
 

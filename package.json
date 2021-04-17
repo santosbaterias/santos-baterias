@@ -1,12 +1,19 @@
 {
   "name": "santos-baterias",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.16.1"
+  },
   "private": true,
+  "homepage": "https://santosbaterias.github.io/santos-baterias",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "firebase": "^8.2.1",
+    "path": "^0.12.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-multi-carousel": "^2.6.1",
@@ -15,11 +22,10 @@
     "react-scroll": "^1.8.1",
     "react-typing-animation": "^1.6.2"
   },
-  "homepage": "https://santosbaterias.github.io/santos-baterias",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
