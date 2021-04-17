@@ -37,19 +37,19 @@ const Cabecalho = ({ inDetalhes }) => {
                             ?
                             <>
                                 <li>
-                                    <a href="/#home" className="texto-bold texto-branco scroll" title="Receba boas vindas!">Home</a>
+                                    <a href="/" className="texto-bold texto-branco scroll" title="Receba boas vindas!">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/#produtos" className="texto-bold texto-branco scroll" title="Conheça nossos produtos!">Produtos</a>
+                                    <a href="/" className="texto-bold texto-branco scroll" title="Conheça nossos produtos!">Produtos</a>
                                 </li>
                                 <li>
-                                    <a href="/#quemsomos" className="texto-bold texto-branco scroll" title="Saiba o porquê somos a melhor opção para você e seu carro!">Quem somos</a>
+                                    <a href="/" className="texto-bold texto-branco scroll" title="Saiba o porquê somos a melhor opção para você e seu carro!">Quem somos</a>
                                 </li>
                                 <li>
-                                    <a href="/#visitenos" className="texto-bold texto-branco scroll" title="Veja nosso endereço!">Visite-nos</a>
+                                    <a href="/" className="texto-bold texto-branco scroll" title="Veja nosso endereço!">Visite-nos</a>
                                 </li>
                                 <li>
-                                    <a href="/#contato" className="texto-bold texto-branco scroll" title="Veja nosso contato!">Contato</a>
+                                    <a href="/" className="texto-bold texto-branco scroll" title="Veja nosso contato!">Contato</a>
                                 </li>
                                 <div>
                                     <li>
