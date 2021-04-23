@@ -27,7 +27,7 @@ function DetalhesDaBateria() {
             <div className="container-wd">
                 <h1 className="titulo" style={{ margin: 60 }}>Detalhes da bateria {data.marca} {data.amperagem}Ah</h1>
                 <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap-reverse", alignItems: "center" }}>
-                    <div>
+                    <div style={{maxWidth: 500}}>
                         <p><span className="texto-bold">Marca:</span> {data.marca}</p><br></br>
                         <p><span className="texto-bold">Garantia:</span> {data.mesesGarantia} meses</p><br></br>
                         <p><span className="texto-bold">Amperagem:</span> {data.amperagem}Ah</p><br></br>
