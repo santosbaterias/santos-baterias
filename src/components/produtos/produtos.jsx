@@ -160,10 +160,10 @@ const Produtos = () => {
                                         <div className="dados-produto">
                                             <h1 className="texto-bold">{bateria.marca}</h1>
                                             <p className="texto-light descricao">Bateria {bateria.amperagem}Ah - {bateria.mesesGarantia} meses de garantia</p>
-                                            <p className="texto-bold preco">R${Number(bateria.preco).toFixed(2)}</p>
+                                            {/* <p className="texto-bold preco">R${Number(bateria.preco).toFixed(2)}</p>
                                             <p className="texto-light">à vista {(Number(bateria.preco)-20).toFixed(2)}{"\n"}</p>
                                             <p>ou...</p>
-                                            <p className="texto-light">até {bateria.parcelas}x de R${Number(bateria.preco/bateria.parcelas).toFixed(2)} sem juros</p>
+                                            <p className="texto-light">até {bateria.parcelas}x de R${Number(bateria.preco/bateria.parcelas).toFixed(2)} sem juros</p> */}
                                             <a href={`#/detalhes/${bateria.id}`}><button>Ver detalhes</button></a>
                                         </div>
                                     </div>

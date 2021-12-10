@@ -32,9 +32,9 @@ function DetalhesDaBateria() {
                         <p><span className="texto-bold">Garantia:</span> {data.mesesGarantia} meses</p><br></br>
                         <p><span className="texto-bold">Amperagem:</span> {data.amperagem}Ah</p><br></br>
                         <p><span className="texto-bold">Tipo:</span> {data.tipo}</p><br></br>
-                        <p><span className="texto-bold">Preço total:</span> R${Number(data.preco).toFixed(2)}</p><br></br>
+                        {/* <p><span className="texto-bold">Preço total:</span> R${Number(data.preco).toFixed(2)}</p><br></br>
                         <p><span className="texto-bold">Preço à vista:</span> R${(Number(data.preco)-20).toFixed(2)}</p><br></br>
-                        <p><span className="texto-bold">Preço parcelado:</span> até {data.parcelas}x de R${(Number(data.preco)/Number(data.parcelas)).toFixed(2)} sem juros</p><br></br>
+                        <p><span className="texto-bold">Preço parcelado:</span> até {data.parcelas}x de R${(Number(data.preco)/Number(data.parcelas)).toFixed(2)} sem juros</p><br></br> */}
                         <p><span className="texto-bold">Descrição:</span> {data.descricao}</p><br></br>
                     </div>
                     <div style={{ backgroundImage: `url(${data.urlImagem})`, width: "80vw", height: "80vw", maxWidth: "240px", maxHeight: "220px", margin: window.screen.width > 783 ? "" : "0 auto 60px auto", backgroundSize: "cover"}}></div>
